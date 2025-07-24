@@ -4,7 +4,7 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 export const Hero = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="about" className="pt-24 md:pt-32 min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float"></div>
