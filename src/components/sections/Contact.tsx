@@ -5,7 +5,7 @@ import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 const contactInfo = [
   {
     icon: Linkedin,
-    label: "Socials",
+    label: "Message Me On",
     value:"LinkedIn",
     href: "https://www.linkedin.com/in/pranavxp/",
   },
