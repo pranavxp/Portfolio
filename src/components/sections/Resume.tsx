@@ -20,6 +20,13 @@ const experiences = [
 
 const education = [
   {
+    degree: "M.Tech in Cyber Forensics And Information Security",
+    institution: "ER&DCI Institute of Technology, Trivandrum",
+    period: "2025 - 2027",
+    description: "Focused on cyber forensics and information security, covering digital evidence analysis, network security, and incident response",
+    highlights: ["Cyber-Forensics", "Data Security"]
+  },
+  {
     degree: "B.Tech in Artificial Intelligence and Data Science",
     institution: "SJCET, Palai",
     period: "2021 - 2025",
