@@ -44,26 +44,12 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-text-secondary leading-relaxed max-w-2xl animate-fade-in" style={{animationDelay: '0.4s'}}>
-                Passionate about cyber security and networking with expertise in AI and data science. 
+                Passionate about cyber security and networking. 
                 I focus on building secure systems, analyzing network vulnerabilities, 
                 and creating innovative solutions for digital security challenges.
               </p>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <a
-                href="/Pranav-CV.pdf"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" className="bg-primary hover:bg-primary-hover shadow-glow group">
-                  <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                  Download CV
-                </Button>
-              </a>
-            </div>
+            
             {/* Social Links */}
             <div className="flex gap-4 justify-center lg:justify-start animate-fade-in" style={{animationDelay: '0.8s'}}>
               <a
