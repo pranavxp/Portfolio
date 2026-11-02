@@ -2,134 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern Portfolio Design System - Dark Theme Focus */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 210 11% 15%;
-    --background-secondary: 210 11% 12%;
-    --foreground: 210 20% 98%;
-
-    --card: 210 11% 18%;
-    --card-foreground: 210 20% 98%;
-    --card-hover: 210 11% 22%;
-
-    --popover: 210 11% 18%;
-    --popover-foreground: 210 20% 98%;
-
-    /* Emerald Accent System */
-    --primary: 160 84% 39%;
-    --primary-foreground: 210 20% 98%;
-    --primary-hover: 160 84% 35%;
-    --primary-glow: 160 84% 39%;
-
-    --secondary: 210 11% 25%;
-    --secondary-foreground: 210 20% 98%;
-    --secondary-hover: 210 11% 30%;
-
-    --muted: 210 11% 25%;
-    --muted-foreground: 210 10% 65%;
-
-    --accent: 160 84% 39%;
-    --accent-foreground: 210 20% 98%;
-    --accent-soft: 160 30% 25%;
-
-    /* Status Colors */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 98%;
-    --success: 142 76% 36%;
-    --warning: 38 92% 50%;
-
-    /* Interactive Elements */
-    --border: 210 11% 28%;
-    --border-hover: 160 84% 39%;
-    --input: 210 11% 22%;
-    --ring: 160 84% 39%;
-
-    /* Text Variations */
-    --text-primary: 210 20% 98%;
-    --text-secondary: 210 10% 75%;
-    --text-muted: 210 10% 55%;
-
-    /* Special Effects */
-    --glow-primary: 160 84% 39%;
-    --shadow-soft: 210 25% 8%;
-    --gradient-primary: linear-gradient(135deg, hsl(160, 84%, 39%), hsl(160, 84%, 45%));
-    --gradient-background: linear-gradient(180deg, hsl(210, 11%, 15%), hsl(210, 11%, 12%));
-
+    --background: 40 20% 96%;
+    --background-secondary: 38 17% 92%;
+    --foreground: 220 15% 13%;
+    --card: 40 25% 99%;
+    --card-foreground: 220 15% 13%;
+    --popover: 40 25% 99%;
+    --popover-foreground: 220 15% 13%;
+    --primary: 160 61% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 160 61% 20%;
+    --primary-glow: 160 61% 25%;
+    --secondary: 38 15% 89%;
+    --secondary-foreground: 220 15% 20%;
+    --secondary-hover: 38 15% 84%;
+    --muted: 38 15% 89%;
+    --muted-foreground: 220 8% 40%;
+    --accent: 160 61% 25%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 160 18% 89%;
+    --destructive: 0 65% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 44% 33%;
+    --warning: 38 70% 45%;
+    --border: 220 10% 84%;
+    --border-hover: 160 61% 25%;
+    --input: 220 10% 84%;
+    --ring: 160 61% 25%;
+    --text-primary: 220 15% 13%;
+    --text-secondary: 220 9% 34%;
+    --text-muted: 220 7% 42%;
+    --shadow-soft: 220 12% 20%;
     --radius: 0.75rem;
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    /* Sidebar Design */
-    --sidebar-background: 210 11% 12%;
-    --sidebar-foreground: 210 20% 98%;
-    --sidebar-primary: 160 84% 39%;
-    --sidebar-primary-foreground: 210 20% 98%;
-    --sidebar-accent: 210 11% 20%;
-    --sidebar-accent-foreground: 210 20% 98%;
-    --sidebar-border: 210 11% 28%;
-    --sidebar-ring: 160 84% 39%;
-  }
-
-  /* Light mode variations for accessibility */
-  .light {
-    --background: 210 20% 98%;
-    --background-secondary: 210 20% 95%;
-    --foreground: 210 11% 15%;
-
-    --card: 210 20% 100%;
-    --card-foreground: 210 11% 15%;
-    --card-hover: 210 20% 96%;
-
-    --primary: 160 84% 39%;
-    --primary-foreground: 210 20% 98%;
-
-    --secondary: 210 20% 92%;
-    --secondary-foreground: 210 11% 15%;
-
-    --muted: 210 20% 92%;
-    --muted-foreground: 210 10% 45%;
-
-    --border: 210 20% 88%;
-    --input: 210 20% 96%;
-
-    --text-primary: 210 11% 15%;
-    --text-secondary: 210 10% 35%;
-    --text-muted: 210 10% 55%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', sans-serif;
     scroll-behavior: smooth;
   }
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground antialiased; margin: 0; }
+  ::selection { background: hsl(var(--primary) / .18); }
+  :focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
+  html { scroll-padding-top: 88px; }
+}
 
-  /* Custom scrollbar styling */
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
+#root { min-height: 100vh; }
+.bg-gradient-background { background: hsl(var(--background)); }
+section[id] { scroll-margin-top: 84px; }
+section.py-20 { padding-top: 88px; padding-bottom: 88px; }
+section .container { max-width: 1200px; }
+section .text-center.mb-16 { text-align: left; margin-bottom: 48px; }
+section .text-center.mb-16 > div { margin-left: 0; margin-right: 0; }
+section .text-center.mb-16 > p { margin-left: 0; }
+section h2 { font-weight: 500 !important; letter-spacing: -.035em; }
+section h3 { font-weight: 500 !important; }
+section .rounded-lg { border-radius: 12px; }
+section [class*="hover:shadow"], section [class*="shadow-glow"] { box-shadow: none; }
+section [class*="hover:border-border-hover"]:hover { border-color: hsl(var(--border)); }
+section [class*="transition-all"] { transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease; }
+section .bg-gradient-primary { background-image: none; }
+section .text-transparent { color: hsl(var(--text-primary)); -webkit-text-fill-color: currentColor; }
+section .bg-clip-text { background: none; }
+section .animate-fade-in, section .animate-slide-in, section .animate-scale-in { animation: none; }
+section .bg-accent-soft { background-color: hsl(var(--accent-soft)); }
+section .text-primary { color: hsl(var(--primary)); }
+section .border-primary\/20 { border-color: hsl(var(--primary) / .2); }
+section .rounded-full { border-radius: 999px; }
+section .text-xs { font-family: 'DM Mono', monospace; letter-spacing: 0; }
 
-  ::-webkit-scrollbar-track {
-    @apply bg-background-secondary;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-primary/30 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary/50;
-  }
-
-  /* Selection styling */
-  ::selection {
-    @apply bg-primary/20 text-primary;
-  }
+@media (max-width: 640px) {
+  section.py-20 { padding-top: 64px; padding-bottom: 64px; }
+  section .text-center.mb-16 { margin-bottom: 32px; }
 }
