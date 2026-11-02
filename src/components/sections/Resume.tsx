@@ -1,20 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, ExternalLink } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    title: "Technical Assistance Intern",
-    company: "Manolo (2022-2023)",
-    period: "2022 - 2023",
-    location: "Hybrid",
-    description: "Provided technical support for internal systems and infrastructure setup.",
+    title: "Information Security Intern",
+    company: "Canza Technology Consultants",
+    companyUrl: "https://www.linkedin.com/company/95698396/",
+    period: "Jun 2026 - Jul 2026 · 2 mos",
+    location: "Trivandrum, Kerala, India · On-site",
+    description: "During this internship, I worked as an Information Security Intern, gaining practical experience in Vulnerability Assessment and Penetration Testing (VAPT) of web applications, APIs, and internet-facing systems. My responsibilities included reconnaissance, web application and API security testing, vulnerability identification and validation, authentication and authorization testing, documenting security findings, and preparing professional security assessment reports with remediation recommendations using industry-standard tools and methodologies.",
     achievements: [
-      "Supported system troubleshooting and ensured smooth day-to-day technical operations.",
-      "Built and configured a NAS (Network-Attached Storage) system for internal data management.",
-      "Assisted in setting up and maintaining office IT infrastructure."
+      "Performed reconnaissance and security testing of web applications, APIs, and internet-facing systems.",
+      "Identified and validated vulnerabilities, including checks of authentication and authorization.",
+      "Documented findings and prepared assessment reports with remediation recommendations."
     ],
-    technologies: ["Computer Hardware","Network Setup","NAS"]
+    technologies: ["Vulnerability Assessment", "Penetration Testing", "Web Application Security", "API Security"]
   }
 ];
 
@@ -82,7 +83,7 @@ export const Resume = () => {
                         <h4 className="text-2xl font-semibold text-text-primary mb-1">
                           {exp.title}
                         </h4>
-                        <p className="text-primary font-medium text-lg">{exp.company}</p>
+                        <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="text-primary font-medium text-lg hover:underline">{exp.company}</a>
                       </div>
                       <div className="flex flex-col md:items-end space-y-2">
                         <div className="flex items-center text-text-secondary">
